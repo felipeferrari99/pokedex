@@ -10,13 +10,16 @@
 </head>
 <body>
     <div>
-        <form id="search">
-            <input placeholder="Search the name or number of a Pokémon!" id="num" name="num" type="text" required>
+        <form autocomplete="off" id="search">
+            <input placeholder="Search the name or number of a Pokémon!" id="input" name="input" type="text" required>
         </form>
         <div id="pokemon">
             <img id="sprite" src="">
         </div>
         <img id="pokedex" src="assets/pokedex.png">
+        <button id="shiny">SHINY</button>
+        <button id="next">NEXT</button>
+        <button id="previous">PREVIOUS</button>
         <div id="stats">
             <img id="menu" src="assets/menu.png">
             <p id="numberLabel">NUMBER:</p>

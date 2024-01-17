@@ -27,6 +27,58 @@ input {
     padding: 12px 20px 12px 60px;
 }
 
+#shiny {
+    position: absolute;
+    top: 65.5%;
+    left: 14%;
+    color: white;
+    font-size: 2em;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 8px;
+    width: 4em;
+    background-color: #FFD700;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+#shiny:active {
+    background-color: #cbb21f;
+    transform: 1s;
+}
+
+#next {
+    position: absolute;
+    top: 67%;
+    left: 76%;
+    color: white;
+    font-size: 1.7em;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 3px;
+    width: 5em;
+    background-color: #084035;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+#next:active, #previous:active {
+    background-color: rgb(43, 46, 33);
+    transform: 1s;
+}
+
+#previous {
+    position: absolute;
+    top: 67%;
+    left: 57%;
+    color: white;
+    font-size: 1.7em;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 3px;
+    width: 5em;
+    background-color: #084035;
+    font-family: 'DotGothic16', sans-serif;
+}
+
 #pokemon img {
     position: relative;
     width: 145%;
