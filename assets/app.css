@@ -1,0 +1,120 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    position: absolute;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+input {
+    font-family: 'DotGothic16', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('pokeball.png');
+    background-size: contain;
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 60px;
+}
+
+#pokemon img {
+    position: relative;
+    width: 145%;
+    left: 130px;
+    top: 190px;
+}
+
+#stats {
+    position: relative;
+    left: 1em;
+    color: white;
+    font-size: 2em;
+    width: 93%;
+    height: 150%;
+}
+
+#menu {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#numberLabel {
+    position: absolute;
+    top: -8%;
+    left: 0.9em;
+}
+
+#number {
+    position: absolute;
+    top: 14%;
+    left: 4.5em;
+}
+
+#pokemonNameLabel {
+    position: absolute;
+    top: 28%;
+    left: 0.9em;
+}
+
+#pokemonName {
+    position: absolute;
+    top: 50%;
+    left: 3.5em;
+    text-transform: uppercase;
+}
+
+#typeLabel {
+    position: absolute;
+    top: -8%;
+    left: 13em;
+}
+
+#type {
+    position: absolute;
+    left: 15.7em;
+    top: 16%;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+#generationLabel {
+    position: absolute;
+    top: 28%;
+    left: 13em;
+}
+
+#generation {
+    position: absolute;
+    left: 18.5em;
+    top: 50%;
+}
+
+@media (max-width: 768px) {
+    div {
+        width: 100%;
+    }
+
+    #pokedex {
+        width: 165%;
+    }
+
+    #menu {
+        width: 160%;
+        justify-content: center;
+    }
+
+    #stats {
+        font-size: 1.7em;
+    }
+}

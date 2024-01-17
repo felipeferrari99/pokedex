@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <div>
+        <form id="search">
+            <input placeholder="Search the name or number of a Pokémon!" id="num" name="num" type="text" required>
+        </form>
+        <div id="pokemon">
+            <img id="sprite" src="">
+        </div>
+        <img id="pokedex" src="assets/pokedex.png">
+        <div id="stats">
+            <img id="menu" src="assets/menu.png">
+            <p id="numberLabel">NUMBER:</p>
+            <span id="number"></span>
+            <p id="pokemonNameLabel">NAME:</p>
+            <span id="pokemonName"></span>
+            <p id="typeLabel">TYPE:</p>
+            <span id="type"></span>
+            <p id="generationLabel">GENERATION:</p>
+            <span id="generation"></span>
+        </div>
+    </div>
+    
+    <script src="src/app.js"></script>
+</body>
+</html>
