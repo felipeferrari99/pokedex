@@ -8,6 +8,8 @@ let shiny = document.querySelector("#shiny");
 let previous = document.querySelector("#previous");
 let next = document.querySelector("#next");
 let input = 0;
+let defaultSprite;
+let shinySprite;
 
 function checkInput() {
     if (input != 0) {
@@ -40,6 +42,19 @@ previous.addEventListener('click', () => {
     }
 })
 
+shiny.addEventListener("click", () => {
+    if (defaultSprite != null && shinySprite != null){
+        checkInput()
+        if (shiny.innerText == "SHINY") {
+            shiny.innerText = "NORMAL";
+            sprite.src = shinySprite;
+        } else if (shiny.innerText == "NORMAL") {
+            shiny.innerText = "SHINY";
+            sprite.src = defaultSprite;
+        }
+    }
+});
+
 function getPokemon(input) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${input}`, {
         method: 'GET',
@@ -53,15 +68,6 @@ function getPokemon(input) {
             shinySprite = data.sprites.front_shiny;
             sprite.src = defaultSprite;
             shiny.innerText = "SHINY";
-            shiny.addEventListener("click", () => {
-                if (shiny.innerText == "SHINY") {
-                    shiny.innerText = "NORMAL";
-                    sprite.src = shinySprite;
-                } else if (shiny.innerHTML == "NORMAL") {
-                    shiny.innerText = "SHINY";
-                    sprite.src = defaultSprite;
-                }
-            });
             pokemonName.innerText = data.name;
             number.innerText = data.id;
             type.innerText = data.types[0].type.name;

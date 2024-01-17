@@ -18,18 +18,22 @@ input {
     box-sizing: border-box;
     margin-top: 1em;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1.3em;
     background-color: white;
     background-image: url('pokeball.png');
     background-size: contain;
     background-position: 5px 3px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 60px;
+    padding: 12px 20px 12px 70px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 #shiny {
     position: absolute;
-    top: 65.5%;
+    top: 66%;
     left: 14%;
     color: white;
     font-size: 2em;
@@ -48,7 +52,7 @@ input {
 
 #next {
     position: absolute;
-    top: 67%;
+    top: 67.4%;
     left: 76%;
     color: white;
     font-size: 1.7em;
@@ -67,7 +71,7 @@ input {
 
 #previous {
     position: absolute;
-    top: 67%;
+    top: 67.4%;
     left: 57%;
     color: white;
     font-size: 1.7em;
@@ -82,8 +86,8 @@ input {
 #pokemon img {
     position: relative;
     width: 145%;
-    left: 130px;
-    top: 190px;
+    left: 8em;
+    top: 12em;
 }
 
 #stats {
@@ -152,21 +156,40 @@ input {
     top: 50%;
 }
 
-@media (max-width: 768px) {
-    div {
-        width: 100%;
+@media (max-width: 940px){
+    #stats {
+        font-size: 1.8em;
     }
+}
 
-    #pokedex {
-        width: 165%;
-    }
+@media (max-width: 768px) {
 
     #menu {
-        width: 160%;
+        width: 100%;
+        display: flex;
         justify-content: center;
     }
 
     #stats {
-        font-size: 1.7em;
+        font-size: 1.2em;
+    }
+
+    input {
+        width: 80%;
+        font-size: 0.8em;
+        margin: 1em auto;
+        display: block;
+        padding: 12px 20px 12px 50px;
+        background-position: 2px 3px;
+    }
+}
+
+@media (max-width: 375px) {
+    #stats {
+        font-size: 1em;
+    }
+
+    input {
+        font-size: 0.7em;
     }
 }
