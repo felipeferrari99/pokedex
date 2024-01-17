@@ -32,17 +32,12 @@ button:hover {
 }
 
 #shiny {
-    position: absolute;
     top: 66%;
     left: 14%;
-    color: white;
     font-size: 2em;
-    border-radius: 5px;
-    border: none;
     padding: 6px 8px;
     width: 4em;
     background-color: #FFD700;
-    font-family: 'DotGothic16', sans-serif;
 }
 
 #shiny:active {
@@ -50,18 +45,23 @@ button:hover {
     transform: 1s;
 }
 
-#next {
+button {
     position: absolute;
-    top: 67.4%;
-    left: 76%;
     color: white;
-    font-size: 1.7em;
     border-radius: 5px;
     border: none;
+    font-family: 'DotGothic16', sans-serif;
+}
+#next, #previous {
+    top: 67.4%;
+    font-size: 1.7em;
     padding: 0px 3px;
     width: 5em;
     background-color: #084035;
-    font-family: 'DotGothic16', sans-serif;
+}
+
+#next {
+    left: 76%;
 }
 
 #next:active, #previous:active {
@@ -70,24 +70,14 @@ button:hover {
 }
 
 #previous {
-    position: absolute;
-    top: 67.4%;
     left: 57%;
-    color: white;
-    font-size: 1.7em;
-    border-radius: 5px;
-    border: none;
-    padding: 0px 3px;
-    width: 5em;
-    background-color: #084035;
-    font-family: 'DotGothic16', sans-serif;
 }
 
 #pokemon img {
     position: relative;
-    width: 145%;
-    left: 8em;
-    top: 12em;
+    width: 130%;
+    left: 15.5vh;
+    top: 22vh;
 }
 
 #stats {
@@ -158,11 +148,35 @@ button:hover {
 
 @media (max-width: 940px){
     #stats {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 }
 
 @media (max-width: 768px) {
+    #pokedex {
+        width: 100%;
+    }
+
+    #shiny {
+        font-size: 1.15em;
+        top: 67%;
+    }
+
+    #previous, #next {
+        font-size: 0.8em;
+        padding: 4px 0px;
+        top: 69%;
+    }
+
+    #previous {
+        left: 60%;
+    }
+
+    #pokemon img {
+        width: 75%;
+        left: 8.5vh;
+        top: 12.5vh;
+    }
 
     #menu {
         width: 100%;
@@ -184,6 +198,24 @@ button:hover {
     }
 }
 
+@media (max-width: 390px) {
+    #stats {
+        font-size: 1em;
+    }
+
+    input {
+        font-size: 0.7em;
+    }
+
+    #shiny {
+        font-size: 1em;
+    }
+
+    #previous, #next {
+        font-size: 0.7em;
+    }
+}
+
 @media (max-width: 375px) {
     #stats {
         font-size: 1em;
@@ -191,5 +223,19 @@ button:hover {
 
     input {
         font-size: 0.7em;
+    }
+
+    #shiny {
+        font-size: 1em;
+    }
+
+    #previous, #next {
+        font-size: 0.7em;
+    }
+
+    #pokemon img {
+        width: 68%;
+        left: 10.5vh;
+        top: 15vh;
     }
 }
