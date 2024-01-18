@@ -1,19 +1,24 @@
-let sprite = document.querySelector("#sprite");
-let number = document.querySelector("#number");
-let pokemonName = document.querySelector("#pokemonName");
-let type = document.querySelector("#type");
-let generation = document.querySelector("#generation");
-let search = document.querySelector("#search");
-let shiny = document.querySelector("#shiny");
-let previous = document.querySelector("#previous");
-let next = document.querySelector("#next");
-let input = 0;
+const sprite = document.querySelector("#sprite");
+const number = document.querySelector("#number");
+const pokemonName = document.querySelector("#pokemonName");
+const type = document.querySelector("#type");
+const generation = document.querySelector("#generation");
+const search = document.querySelector("#search");
+const shiny = document.querySelector("#shiny");
+const previous = document.querySelector("#previous");
+const next = document.querySelector("#next");
+let userInput = null;
 let defaultSprite;
 let shinySprite;
 
 function checkInput() {
-    if (input != 0) {
-        input = parseInt(number.innerText);
+    if (userInput != 0) {
+        userInput = parseInt(number.innerText);
+        if (number.innerText == "") {
+        userInput = 0;
+        }
+    } else if (userInput == 0) {
+        userInput = parseInt(number.innerText);
     }
 }
 
@@ -21,29 +26,32 @@ search.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    input = formData.get('input').toLowerCase();
-
-    getPokemon(input);
+    userInput = formData.get('userInput').toLowerCase().trim();
+    if (isNaN(userInput)) {
+        getPokemon(userInput);
+    } else {
+        getPokemon(parseInt(userInput));
+    }
 });
 
 next.addEventListener('click', () => {
     checkInput()
-    if (input < 1025) {
-        input = parseInt(input) + 1;
-        getPokemon(input);
+    if (userInput < 1026) {
+        userInput = parseInt(userInput) + 1;
+        getPokemon(userInput);
     }
 })
 
 previous.addEventListener('click', () => {
     checkInput()
-    if (input > 1) {
-        input = parseInt(input) - 1;
-        getPokemon(input);
+    if (userInput > 0) {
+        userInput = parseInt(userInput) - 1;
+        getPokemon(userInput);
     }
 })
 
 shiny.addEventListener("click", () => {
-    if (defaultSprite != null && shinySprite != null){
+    if (defaultSprite && shinySprite){
         checkInput()
         if (shiny.innerText == "SHINY") {
             shiny.innerText = "NORMAL";
@@ -55,8 +63,8 @@ shiny.addEventListener("click", () => {
     }
 });
 
-function getPokemon(input) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${input}`, {
+function getPokemon(userInput) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${userInput}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -161,9 +169,10 @@ function getPokemon(input) {
                 default:
                     generation.innerText = "9";
             }        
-            document.querySelector("#input").value = "";
+            document.querySelector("#userInput").value = "";
     })
     .catch(error => {
-        console.error('Error:', error);
+        alert("Pokémon not found!")
+        document.querySelector("#userInput").value = "";
     });
 }

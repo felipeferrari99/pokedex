@@ -7,13 +7,15 @@ body {
     justify-content: center;
 }
 
+body, input, button {
+    font-family: 'DotGothic16', sans-serif; 
+}
+
 div {
     position: absolute;
-    font-family: 'DotGothic16', sans-serif;
 }
 
 input {
-    font-family: 'DotGothic16', sans-serif;
     width: 100%;
     box-sizing: border-box;
     margin-top: 1em;
@@ -25,6 +27,13 @@ input {
     background-position: 5px 3px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 70px;
+}
+
+button {
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }
 
 button:hover {
@@ -45,13 +54,6 @@ button:hover {
     transform: 1s;
 }
 
-button {
-    position: absolute;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    font-family: 'DotGothic16', sans-serif;
-}
 #next, #previous {
     top: 67.4%;
     font-size: 1.7em;
@@ -73,11 +75,11 @@ button {
     left: 57%;
 }
 
-#pokemon img {
-    position: relative;
-    width: 130%;
-    left: 15.5vh;
-    top: 22vh;
+#sprite {
+    position: fixed;
+    width: 7%;
+    left: 81vh;
+    top: 30vh;
 }
 
 #stats {
@@ -172,8 +174,7 @@ button {
         left: 60%;
     }
 
-    #pokemon img {
-        width: 75%;
+    #sprite {
         left: 8.5vh;
         top: 12.5vh;
     }
@@ -233,8 +234,7 @@ button {
         font-size: 0.7em;
     }
 
-    #pokemon img {
-        width: 68%;
+    #sprite {
         left: 10.5vh;
         top: 15vh;
     }
