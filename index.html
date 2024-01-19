@@ -9,14 +9,31 @@
     <title>Pokédex</title>
 </head>
 <body>
-    <div>
+    <div id="div">
         <form autocomplete="off" id="search">
             <input placeholder="Search the name or number of a Pokémon!" id="userInput" name="userInput" type="text" required>
         </form>
-        <img id="pokedex" src="assets/pokedex.png">
-        <button id="shiny">SHINY</button>
-        <button id="next">NEXT</button>
-        <button id="previous">PREVIOUS</button>
+        <div id="pokedex">
+            <div id="decor">
+                <div id="blueButton"></div>
+                <div id="redButton"></div>
+                <div id="yellowButton"></div>
+                <div id="greenButton"></div>
+                <div id="screen">
+                    <img id="sprite" src="">
+                    <div id="redButton2"></div>
+                    <div id="smallRedButton"></div>
+                    <div id="smallRedButton2"></div>
+                    <div id="screenBackground"></div>
+                </div>
+                <div id="blackButton"></div>
+                <div id="redPillButton"></div>
+                <div id="bluePillButton"></div>
+                <button id="shiny">SHINY</button>
+                <button id="next">NEXT</button>
+                <button id="previous">PREVIOUS</button>
+            </div>
+        </div>
         <div id="stats">
             <img id="menu" src="assets/menu.png">
             <p id="numberLabel">NUMBER:</p>
@@ -31,7 +48,6 @@
             <p id="generationLabel">GENERATION:</p>
             <span id="generation"></span>
         </div>
-        <img id="sprite" src="">
     </div>
     
     <script src="src/app.js"></script>
