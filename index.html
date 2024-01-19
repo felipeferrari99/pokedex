@@ -5,51 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/app.css">
     <title>Pokédex</title>
 </head>
 <body>
-    <div id="div">
-        <form autocomplete="off" id="search">
-            <input placeholder="Search the name or number of a Pokémon!" id="userInput" name="userInput" type="text" required>
-        </form>
-        <div id="pokedex">
-            <div id="decor">
-                <div id="blueButton"></div>
-                <div id="redButton"></div>
-                <div id="yellowButton"></div>
-                <div id="greenButton"></div>
-                <div id="screen">
-                    <img id="sprite" src="">
-                    <div id="redButton2"></div>
-                    <div id="smallRedButton"></div>
-                    <div id="smallRedButton2"></div>
-                    <div id="screenBackground"></div>
+    <div class="container">
+            <div id="pokedex" class="d-flex justify-content-center">
+                <div id="decor">
+                    <div id="blueButton"></div>
+                    <div id="redButton"></div>
+                    <div id="yellowButton"></div>
+                    <div id="greenButton"></div>
+                    <div id="screen" class="d-flex flex-column">
+                        <img id="sprite" src="">
+                        <div id="redButton2"></div>
+                        <div id="smallRedButton"></div>
+                        <div id="smallRedButton2"></div>
+                        <div id="screenBackground"></div>
+                    </div>
+                    <div id="blackButton"></div>
+                    <div id="redPillButton"></div>
+                    <div id="bluePillButton"></div>
+                    <button id="shiny">SHINY</button>
+                    <button id="next">NEXT</button>
+                    <button id="previous">PREVIOUS</button>
+                    <form autocomplete="off" id="search">
+                        <input placeholder="Search!" id="userInput" name="userInput" type="text" required>
+                    </form>
                 </div>
-                <div id="blackButton"></div>
-                <div id="redPillButton"></div>
-                <div id="bluePillButton"></div>
-                <button id="shiny">SHINY</button>
-                <button id="next">NEXT</button>
-                <button id="previous">PREVIOUS</button>
+            </div>
+
+        <div class="d-flex justify-content-center">
+            <div id="stats" class="mt-3">
+                <img id="menu" class="img-fluid" src="assets/menu.png">
+                <p id="numberLabel">NUMBER:</p>
+                <span id="number"></span>
+
+                <p id="pokemonNameLabel">NAME:</p>
+                <span id="pokemonName"></span>
+
+                <p id="typeLabel">TYPE:</p>
+                <span id="type"></span>
+
+                <p id="generationLabel">GENERATION:</p>
+                <span id="generation"></span>
             </div>
         </div>
-        <div id="stats">
-            <img id="menu" src="assets/menu.png">
-            <p id="numberLabel">NUMBER:</p>
-            <span id="number"></span>
-
-            <p id="pokemonNameLabel">NAME:</p>
-            <span id="pokemonName"></span>
-
-            <p id="typeLabel">TYPE:</p>
-            <span id="type"></span>
-
-            <p id="generationLabel">GENERATION:</p>
-            <span id="generation"></span>
-        </div>
     </div>
-    
+
     <script src="src/app.js"></script>
 </body>
 </html>
