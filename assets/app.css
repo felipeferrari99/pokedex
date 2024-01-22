@@ -22,8 +22,14 @@ input {
 
 #errorMessage {
     color: transparent;
+    cursor: default;
     font-size: 1.5em;
     margin: 23rem -30rem;
+}
+
+#errorMessage.appearing {
+    color: white;
+    cursor: auto;
 }
 
 #pokedex, #decor, #screenBackground {

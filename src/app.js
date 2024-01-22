@@ -73,7 +73,7 @@ function getPokemon(userInput) {
     })
         .then(response => response.json())
         .then(data => {
-            errorMessage.style.color = "transparent";
+            errorMessage.classList.remove("appearing")
             defaultSprite = data.sprites.front_default;
             shinySprite = data.sprites.front_shiny;
             sprite.src = defaultSprite;
@@ -175,6 +175,6 @@ function getPokemon(userInput) {
     })
     .catch(error => {
         document.querySelector("#userInput").value = "";
-        errorMessage.style.color = "white";
+        errorMessage.classList.add("appearing")
     });
 }
