@@ -6,21 +6,24 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-body, input, button {
     font-family: 'DotGothic16', sans-serif !important;
 }
 
 input {
     position: absolute;
-    width: 12%;
+    width: 40%;
     box-sizing: border-box;
-    margin: 25rem -30rem;
+    margin: -22.5rem -30rem;
     border-radius: 5px;
     font-size: 1.3em;
     background: url('pokeball.png') 5px 3px/contain no-repeat white;
     padding: 12px 20px 12px 70px;
+}
+
+#errorMessage {
+    color: transparent;
+    font-size: 1.5em;
+    margin: 23rem -30rem;
 }
 
 #pokedex, #decor, #screenBackground {
@@ -28,7 +31,6 @@ input {
     display: flex;
     align-self: center;
     justify-self: center;
-    box-sizing: border-box;
     border-radius: 15px;
 }
 
@@ -37,6 +39,8 @@ input {
     height: 38rem;
     background-color: #dc0a2d;
     border: 3px solid #31050d;
+    display: flex;
+    position: relative; /* Adicionado para posicionamento relativo */
 }
 
 #decor, #screenBackground {
@@ -46,7 +50,7 @@ input {
     border: 2px solid black;
 }
 
-#blueButton, #redButton, #yellowButton, #greenButton, #redButton2, #smallRedButton, #smallRedButton2, #blackButton, #redPillButton, #bluePillButton {
+.decorButtons {
     position: absolute;
     border-radius: 50%;
     border: 1px solid black;
@@ -191,128 +195,88 @@ button:hover {
     margin-left: 0.3em;
 }
 
-#stats, #menu {
+#menu {
+    width: 38rem;
+    height: 18rem;
     border-radius: 15px;
-    width: 44rem;
-    position: relative;
+    transform: rotate(90deg);
+    margin-left: 24em;
+    margin-top: -15em;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
     color: white;
     font-size: 2em;
 }
 
 #numberLabel {
+    margin-left: 30.5em;
+    margin-top: -19em;
     position: absolute;
-    top: 14%;
-    left: 4%;
 }
 
 #number {
+    margin-left: 30.5em;
+    margin-top: -17.8em;
     position: absolute;
-    top: 14%;
-    left: 20.5%;
 }
 
 #pokemonNameLabel {
+    margin-left: 30.5em;
+    margin-top: -15em;
     position: absolute;
-    top: 50%;
-    left: 4%;
 }
 
 #pokemonName {
+    margin-left: 30.5em;
+    margin-top: -13.8em;
     position: absolute;
-    top: 50%;
-    left: 16%;
     text-transform: uppercase;
 }
 
 #typeLabel {
+    margin-left: 30.5em;
+    margin-top: -10em;
     position: absolute;
-    top: 16%;
-    left: 60%;
 }
 
 #type {
+    margin-left: 30.5em;
+    margin-top: -8.5em;
     position: absolute;
-    left: 72%;
-    top: 16%;
     text-transform: uppercase;
     border-radius: 5px;
     padding: 0px 5px;
 }
 
 #generationLabel {
+    margin-left: 30.5em;
+    margin-top: -5em;
     position: absolute;
-    top: 50%;
-    left: 60%;
 }
 
 #generation {
+    margin-left: 30.5em;
+    margin-top: -3.8em;
     position: absolute;
-    left: 86%;
-    top: 50%;
 }
 
-@media (max-width: 1500px) {
-    input {
-        width: 15%;
-    }
-}
-
-@media (max-width: 1050px) {
-    input {
-        width: 20%;
-    }
-}
-
-@media (max-width: 816px) {
+@media (max-width: 1400px) {
     #stats {
-        font-size: 1.7em;
-    }
-
-    input {
-        width: 25%;
+        margin-left: -2em;
     }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 1200px) {
     #stats {
-        font-size: 1.4em;
-    }
-
-    input {
-        width: 30%;
+        margin-left: -4em;
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 995px) {
     #stats {
-        margin-left: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #stats {
-        font-size: 1.2em;
-        margin-left: 6rem;
-    }
-
-    input {
-        width: 40%;
-    }
-}
-
-@media (max-width: 480px) {
-    #stats {
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 390px) {
-    #stats {
-        font-size: 0.8em;
-        margin-left: 8rem;
-    }
-
-    input {
-        width: 45%;
+        margin-left: -8em;
     }
 }

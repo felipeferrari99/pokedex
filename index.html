@@ -14,24 +14,25 @@
     <div class="container">
             <div id="pokedex" class="d-flex justify-content-center">
                 <div id="decor">
-                    <div id="blueButton"></div>
-                    <div id="redButton"></div>
-                    <div id="yellowButton"></div>
-                    <div id="greenButton"></div>
+                    <div class="decorButtons" id="blueButton"></div>
+                    <div class="decorButtons" id="redButton"></div>
+                    <div class="decorButtons" id="yellowButton"></div>
+                    <div class="decorButtons" id="greenButton"></div>
                     <div id="screen" class="d-flex flex-column">
                         <img id="sprite" src="">
-                        <div id="redButton2"></div>
-                        <div id="smallRedButton"></div>
-                        <div id="smallRedButton2"></div>
+                        <div class="decorButtons" id="redButton2"></div>
+                        <div class="decorButtons" id="smallRedButton"></div>
+                        <div class="decorButtons" id="smallRedButton2"></div>
                         <div id="screenBackground"></div>
                     </div>
-                    <div id="blackButton"></div>
-                    <div id="redPillButton"></div>
-                    <div id="bluePillButton"></div>
+                    <div class="decorButtons" id="blackButton"></div>
+                    <div class="decorButtons" id="redPillButton"></div>
+                    <div class="decorButtons" id="bluePillButton"></div>
                     <button id="shiny">SHINY</button>
                     <button id="next">NEXT</button>
                     <button id="previous">PREVIOUS</button>
                     <form autocomplete="off" id="search">
+                        <p id="errorMessage">Pokémon not found!</p>
                         <input placeholder="Search!" id="userInput" name="userInput" type="text" required>
                     </form>
                 </div>

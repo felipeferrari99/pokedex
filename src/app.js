@@ -7,6 +7,7 @@ const search = document.querySelector("#search");
 const shiny = document.querySelector("#shiny");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
+const errorMessage = document.querySelector("#errorMessage");
 let userInput = null;
 let defaultSprite;
 let shinySprite;
@@ -72,6 +73,7 @@ function getPokemon(userInput) {
     })
         .then(response => response.json())
         .then(data => {
+            errorMessage.style.color = "transparent";
             defaultSprite = data.sprites.front_default;
             shinySprite = data.sprites.front_shiny;
             sprite.src = defaultSprite;
@@ -172,7 +174,7 @@ function getPokemon(userInput) {
             document.querySelector("#userInput").value = "";
     })
     .catch(error => {
-        alert("Pokémon not found!")
         document.querySelector("#userInput").value = "";
+        errorMessage.style.color = "white";
     });
 }
