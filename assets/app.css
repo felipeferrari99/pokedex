@@ -27,7 +27,6 @@ input {
 }
 
 #pokedex, #decor, #screenBackground {
-    margin: 1em auto;
     display: flex;
     align-self: center;
     justify-self: center;
@@ -35,6 +34,8 @@ input {
 }
 
 #pokedex {
+    margin-top: 1em;
+    margin-left: 14em;
     width: 32rem;
     height: 38rem;
     background-color: #dc0a2d;
@@ -200,8 +201,8 @@ button:hover {
     height: 18rem;
     border-radius: 15px;
     transform: rotate(90deg);
-    margin-left: 24em;
-    margin-top: -15em;
+    margin-left: 16em;
+    margin-top: -14.5em;
 }
 
 #stats {
@@ -211,72 +212,64 @@ button:hover {
     font-size: 2em;
 }
 
-#numberLabel {
-    margin-left: 30.5em;
-    margin-top: -19em;
+.attributes {
+    margin-left: 22.5em;
     position: absolute;
+    text-transform: uppercase;
+}
+
+#numberLabel {
+    margin-top: -19em;
 }
 
 #number {
-    margin-left: 30.5em;
     margin-top: -17.8em;
-    position: absolute;
 }
 
 #pokemonNameLabel {
-    margin-left: 30.5em;
     margin-top: -15em;
-    position: absolute;
 }
 
 #pokemonName {
-    margin-left: 30.5em;
     margin-top: -13.8em;
-    position: absolute;
-    text-transform: uppercase;
 }
 
 #typeLabel {
-    margin-left: 30.5em;
     margin-top: -10em;
-    position: absolute;
 }
 
 #type {
-    margin-left: 30.5em;
     margin-top: -8.5em;
-    position: absolute;
-    text-transform: uppercase;
     border-radius: 5px;
     padding: 0px 5px;
 }
 
 #generationLabel {
-    margin-left: 30.5em;
     margin-top: -5em;
-    position: absolute;
 }
 
 #generation {
-    margin-left: 30.5em;
     margin-top: -3.8em;
-    position: absolute;
 }
 
 @media (max-width: 1400px) {
     #stats {
-        margin-left: -2em;
+        margin-left: 3em;
     }
 }
 
-@media (max-width: 1200px) {
-    #stats {
-        margin-left: -4em;
+@media (max-width: 768px) {
+    .attributes {
+        margin-left: 25.5em;
+    }
+
+    #menu {
+        margin-left: 19em;
     }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 500px) {
     #stats {
-        margin-left: -8em;
+        margin-left: 7em;
     }
 }
